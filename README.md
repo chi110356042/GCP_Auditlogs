@@ -9,7 +9,7 @@ This project explores the issue of **data governance(DG)** and focus on the topi
 
 ## Commands to run
 
-Download the file `main.py` and verify your `project_id` ,and `dataset_id` first.
+Download the file `main.py` and verify your `project_id` , `dataset_id`, and `sender\receiver email` first.
 
 If you don't have app passwords, generate it first! [Sign in to your account with your app password ](https://support-google-com.translate.goog/accounts/answer/185833?hl=zh-Hant&_x_tr_sl=zh-TW&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc )
 
