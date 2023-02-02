@@ -7,7 +7,7 @@ This project explores the issue of **data governance(DG)** and focus on the topi
 
 <img width="700" alt="截圖 2023-02-02 上午10 56 06" src="https://user-images.githubusercontent.com/92499570/216220121-d3cec028-e94e-4780-b30e-e49c4938f20e.png">
 
-**Commands to run**  
+## Commands to run
 
 Download the file `main.py` and verify your `project_id` ,and `dataset_id` first.
 
