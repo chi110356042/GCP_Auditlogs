@@ -133,8 +133,9 @@ with smtplib.SMTP_SSL(smtp_server_str, port) as smtp_server:
 
         body = MIMEText(txt, "plain")
         msg.attach(body)
-        part1 = MIMEText(html, 'html')
-        msg.attach(part1) 
+        if len(unique_user)!=0:
+            part1 = MIMEText(html, 'html')
+            msg.attach(part1) 
 
         smtp_server.sendmail(
             sender_email,
