@@ -49,6 +49,10 @@ count=0
 
 
 
+'''
+iam service account example:
+p878198504389-232004@gcp-sa-logging.iam.gserviceaccount.com
+'''
 for i in range(0, len(df.index)):
     if "iam.gserviceaccount" not in df["principalEmail"][i]:
         user_name = df["principalEmail"][i].split('@')  
@@ -62,36 +66,31 @@ for i in range(0, len(df.index)):
 if df.empty==True:
     print("No danger user last night")
 
-#處理timestamp座標
-use_time=[]
-change=0
-for i in range(0,len(time)):
-    use_str=time[i]
-    use_str=use_str.replace("2023-", "").replace("+08:00", "")
-    use_str=use_str.split()
-    if i==0:
-        use_time.append(use_str[0]+use_str[1])
-    else:
-        if use_str[1][0]=='0':
-            change+=1
-            if change==1:
-                use_time.append(use_str[0]+use_str[1])
-            else:
-                use_time.append(use_str[1])
-        else:
-            use_time.append(use_str[1])
+else:    
+    #處理timestamp
+    use_time=[]
+    date_time=[]
 
-#print dataframe
-use={"user": danger_user_query,
-      "time": use_time}
-data_table=pd.DataFrame(use)
-print(data_table)
+    for i in range(0,len(time)):
+        use_str=time[i]
+        use_str=use_str.replace("2023-", "").replace("+08:00", "")
+        use_str=use_str.split()
+        date_time.append(use_str[0])
+        use_time.append(use_str[1])
+
+    #print dataframe
+    use={"user": danger_user_query[::-1],
+        "date": date_time[::-1],
+        "time": use_time[::-1]}
+    data_table=pd.DataFrame(use)
+    print(data_table)
 
 
-data = [
-    #("YuChi", "v871202@gmail.com"),
-    ("Kite", "re102162189@gmail.com"),
-    ("Joanne", "jo05240625@gmail.com"),
+#change your sender/receiver email info here
+data=[
+    ("YuChi", "v871202@gmail.com"),
+    #("Kite", "re102162189@gmail.com"),
+    #("Joanne", "jo05240625@gmail.com"),
 
 ]
 
@@ -120,6 +119,7 @@ with smtplib.SMTP_SSL(smtp_server_str, port) as smtp_server:
             for i in range(0,len(unique_user)):
                 txt += f"User {i+1}: {unique_user[i]}\n"
             
+
             html = """\
             <html>
             <head></head>
@@ -128,8 +128,6 @@ with smtplib.SMTP_SSL(smtp_server_str, port) as smtp_server:
             </body>
             </html>
             """.format(build_table(data_table, 'blue_light'))
-
-            
 
         body = MIMEText(txt, "plain")
         msg.attach(body)
@@ -155,5 +153,3 @@ plt.scatter(use_time, danger_user_query, color = '#88c999')
 plt.title('Danger query last day')
 plt.show()
 '''
-
-
