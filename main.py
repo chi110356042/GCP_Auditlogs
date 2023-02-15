@@ -52,7 +52,11 @@ count=0
 '''
 iam service account example:
 p878198504389-232004@gcp-sa-logging.iam.gserviceaccount.com
+
+principal user email:
+irenehu@cathayholdings.com.tw
 '''
+
 for i in range(0, len(df.index)):
     if "iam.gserviceaccount" not in df["principalEmail"][i]:
         user_name = df["principalEmail"][i].split('@')  
