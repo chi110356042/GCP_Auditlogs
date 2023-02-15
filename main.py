@@ -73,6 +73,10 @@ else:
 
     for i in range(0,len(time)):
         use_str=time[i]
+        '''
+        原始格式：
+        2023-02-08 23:25:50+08:00
+        '''
         use_str=use_str.replace("2023-", "").replace("+08:00", "")
         use_str=use_str.split()
         date_time.append(use_str[0])
