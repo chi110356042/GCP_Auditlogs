@@ -13,7 +13,7 @@ This project explores the issue of **data governance(DG)** and focus on the topi
 
 **2.** If you don't have app passwords, generate it first! [Sign in to your account with your app password ](https://support-google-com.translate.goog/accounts/answer/185833?hl=zh-Hant&_x_tr_sl=zh-TW&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc )
 
-**3.** Create your Cloud Run service in your project [Cloud Run Quickstart ](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service)
+**3.** Create your Cloud Run service in your project [Cloud Run overview ]( https://cloud.google.com/run/docs/overview/what-is-cloud-run)
 
 <img width="800" alt="截圖 2023-02-17 上午9 36 55" src="https://user-images.githubusercontent.com/92499570/219527340-0a4a1bc8-8ab0-44c2-b01c-791a2e3fc3a9.png">
 
