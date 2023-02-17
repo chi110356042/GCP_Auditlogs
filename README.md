@@ -19,4 +19,4 @@ Then you can run the commands below.
 
 
 ## Result
-![image](https://user-images.githubusercontent.com/92499570/216216865-13932fd0-284a-4c4d-9a24-901419a5f840.png)
+<img width="294" alt="截圖 2023-02-10 下午4 49 18" src="https://user-images.githubusercontent.com/92499570/218046082-a2b12b2a-f40f-4df7-bd02-6541b60d8cf0.png">
