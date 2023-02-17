@@ -18,7 +18,7 @@ This project explores the issue of **data governance(DG)** and focus on the topi
 <img width="800" alt="截圖 2023-02-17 上午9 36 55" src="https://user-images.githubusercontent.com/92499570/219527340-0a4a1bc8-8ab0-44c2-b01c-791a2e3fc3a9.png">
 
 
-Then you can run the command below to build using Dockerfile and deploying container to your Cloud Run service in your project.  
+Then you can run the command below to build using Dockerfile and deploy container to your Cloud Run service in your project.  
 
 >`gcloud run deploy YourServiceName --source .`  
 
