@@ -9,14 +9,21 @@ This project explores the issue of **data governance(DG)** and focus on the topi
 
 ## Commands to run
 
-Download the file `main.py` and verify your `project_id` , `dataset_id`, and `sender/receiver email` first.
+**1.** Download the folder and verify your `project_id`, `dataset_id`, and `sender/receiver email`
 
-If you don't have app passwords, generate it first! [Sign in to your account with your app password ](https://support-google-com.translate.goog/accounts/answer/185833?hl=zh-Hant&_x_tr_sl=zh-TW&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc )
+**2.** If you don't have app passwords, generate it first! [Sign in to your account with your app password ](https://support-google-com.translate.goog/accounts/answer/185833?hl=zh-Hant&_x_tr_sl=zh-TW&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=sc )
 
-Then you can run the commands below.  
+**3** Create your Cloud Run service in your project [Cloud Run Quickstart ](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service)
 
->`python3 main.py`  
+<img width="882" alt="截圖 2023-02-17 上午9 36 55" src="https://user-images.githubusercontent.com/92499570/219527340-0a4a1bc8-8ab0-44c2-b01c-791a2e3fc3a9.png">
+
+
+Then you can run the command below to build using Dockerfile and deploying container to your Cloud Run service in your project.  
+
+>`gcloud run deploy **Your service name** --source .`  
 
 
 ## Result
 <img width="294" alt="截圖 2023-02-10 下午4 49 18" src="https://user-images.githubusercontent.com/92499570/218046082-a2b12b2a-f40f-4df7-bd02-6541b60d8cf0.png">
+
+<img width="270" alt="截圖 2023-02-17 上午9 26 13" src="https://user-images.githubusercontent.com/92499570/219525957-d2ccf830-1b3e-4760-bf7f-1fd59a39a0f4.png">
